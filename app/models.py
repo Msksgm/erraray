@@ -12,10 +12,18 @@ class Item(models.Model):
     https://docs.djangoproject.com/ja/2.1/ref/models/fields/
     """
 
-    # サンプル項目1 文字列
+    # 言語名
     language = models.CharField(
         verbose_name='言語名',
         max_length=20,
+        blank=True,
+        null=True,
+    )
+
+    # タグ or ライブラリ
+    tags = models.CharField(
+        verbose_name='タグorライブラリ',
+        max_length=40,
         blank=True,
         null=True,
     )
