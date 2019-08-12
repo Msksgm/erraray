@@ -45,6 +45,14 @@
                             {# item_detail_contents.html を参考に必要な項目を追加してください #}
                             <div class="row">
                                 <div class="col-5 col-sm-3">
+                                    <p>状況</p>
+                                </div>
+                                <div class="col-7 col-sm-9">
+                                    <p>{{  item.solve|default_if_none:"未入力"  }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5 col-sm-3">
                                     <p>言語</p>
                                 </div>
                                 <div class="col-7 col-sm-9">
@@ -69,12 +77,12 @@
                             </div>
                             <div class="row">
                                 <div class="col-5 col-sm-3">
-                                    <p>作成時間</p>
+                                    <p>更新者</p>
                                 </div>
                                 <div class="col-7 col-sm-9">
-                                    <p>{{ item.created_at|date:"Y/m/d G:i:s" }}</p>
+                                    <p>{{ item.updated_by.get_full_name }}</p>
                                 </div>
-                            </div>
+                            </div>                            
                             <div class="row">
                                 <div class="col-12">
                                     <div class="float-right">

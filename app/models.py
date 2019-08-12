@@ -12,6 +12,20 @@ class Item(models.Model):
     https://docs.djangoproject.com/ja/2.1/ref/models/fields/
     """
 
+    # 解決or非解決
+    # サンプル項目4 選択肢
+    choice = (
+        (1, '解決'),
+        (2, '非解決'),
+    )
+
+    solve = models.IntegerField(
+        verbose_name='選択肢',
+        choices=choice,
+        blank=True,
+        null=True,
+    )
+
     # 言語名
     language = models.CharField(
         verbose_name='言語名',

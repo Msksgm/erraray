@@ -18,8 +18,8 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-md navbar-light bg-primary ">
-    <a class="navbar-brand mb-0 h1" href="#">Erraray</a>
+<nav class="navbar navbar-expand-md navbar-light " style="background-color: navy;">
+    <a class="navbar-brand mb-0 h1" href="#" style="color: oldlace;">Erraray</a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber"
             aria-expanded="false"
             aria-label="ナビゲーションの切替">
@@ -28,12 +28,12 @@
     <div class="collapse navbar-collapse justify-content-end" id="Navber">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'admin:index' %}">管理画面</a>
+                <a class="nav-link" href="{% url 'admin:index' %}"><span style="color: oldlace;">管理画面</span></a>
             </li>
         </ul>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'admin:logout' %}">ログアウト</a>
+                <a class="nav-link" href="{% url 'admin:logout' %}"><span style="color: oldlace;">ログアウト</span></a>
             </li>
         </ul>
     </div>
