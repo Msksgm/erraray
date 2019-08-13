@@ -15,12 +15,13 @@ class Item(models.Model):
     # 解決or非解決
     # サンプル項目4 選択肢
     choice = (
-        (1, '解決'),
-        (2, '非解決'),
+        ("解決", '解決'),
+        ("非解決", '非解決'),
     )
 
-    solve = models.IntegerField(
+    solve = models.CharField(
         verbose_name='選択肢',
+        max_length=5,
         choices=choice,
         blank=True,
         null=True,
@@ -42,21 +43,28 @@ class Item(models.Model):
         null=True,
     )
 
-    # サンプル項目2 メモ
+    # 内容
     contents = models.TextField(
         verbose_name='内容',
         blank=True,
         null=True,
     )
 
-    # サンプル項目7 日付
+    # 追記
+    add_contents = models.TextField(
+        verbose_name='追記',
+        blank=True,
+        null=True,
+    )
+
+    # 日付
     date = models.DateField(
         verbose_name='日付',
         blank=True,
         null=True,
     )
 
-    # サンプル項目8 日時
+    # 日時
     datetime = models.DateTimeField(
         verbose_name='日時',
         blank=True,
